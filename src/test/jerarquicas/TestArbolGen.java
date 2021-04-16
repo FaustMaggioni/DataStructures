@@ -1,0 +1,76 @@
+package test.jerarquicas;
+import EDD.jerarquicas.ArbolGen;
+import TPFinalEDAT.Lista;
+public class TestArbolGen {
+    public static void main(String []args){
+        ArbolGen gene= new ArbolGen();
+        gene.insertar(2,0);
+        gene.insertar(3,2);
+        gene.insertar(5,2);
+        gene.insertar(6,2);
+        gene.insertar(7,2);
+        gene.insertar(1,3);
+        gene.insertar(9,3);
+        gene.insertar(0,3);
+        gene.insertar(13,5);
+        gene.insertar(21,6);
+        gene.insertar(8,6);
+        gene.insertar(23,13);
+        gene.insertar(22,13);
+        gene.insertar(15,13);
+        gene.insertar(20,15);
+        gene.insertar(28,20);
+        gene.insertar(33,28);
+        gene.insertar(24,28);
+        gene.insertar(88,28);
+        System.out.println(gene.toString());
+        ArbolGen clone= gene.clone();
+        clone.insertar(888, 15);
+        System.out.println("Clone: "+clone.toString());
+        gene.insertar(991, 88);
+        System.out.println("Clone despues de agregar 991 al original: "+clone.toString());
+        System.out.println("Por niveles: "+gene.porNivel().toString());
+        boolean p= gene.pertenece(5);
+        boolean x= gene.pertenece(100);
+        System.out.println("True y False: "+p+", "+x);
+        Lista ancestros= gene.ancentros(88);
+        System.out.println("Ancestros de 88: "+ancestros.toString());
+        int padre= (int)gene.padre(28);
+        System.out.println("Padre de 28,espera 20: "+ padre);
+        int alt= gene.altura();
+        System.out.println("Altura, espera 3: "+alt);
+        int nivel= gene.nivel(9);
+        System.out.println("Nivel de 9: "+nivel);
+        ArbolGen cl= gene.clone();
+        System.out.println("Clone: "+cl.toString());
+        cl.insertar(50,9);
+        System.out.println("Clone: "+cl.toString());
+        System.out.println("Original sin el 50: "+gene.toString());
+        //gene.vaciar();
+        //boolean t= gene.esVacio();
+        //System.out.println("Es vacia? "+t);
+        Lista preorden= cl.listarPreorden();
+        System.out.println("Preorden: "+preorden);
+        Lista posorden= cl.listarPosOrden();
+        System.out.println("Posorden: "+posorden);
+        Lista niveles= gene.porNivel();
+        System.out.println("Niveles: "+niveles);
+        Lista lis= new Lista();
+        lis.insertar(2,1);
+        lis.insertar(5,2);
+        lis.insertar(13,3);
+        lis.insertar(22,4);
+        //lis.insertar(20,5);
+        //lis.insertar(28,6);
+        //lis.insertar(33,7);
+        //lis.insertar(99, 8);
+        boolean pepe= gene.verificarPatron(lis);
+        System.out.println("Boolean: "+pepe);
+        Lista frontera= gene.frontera();
+        System.out.println("Frontera: "+frontera);
+        Lista maslarga= gene.listaQueJustificaLaAltura();
+        System.out.println("Mas larga: "+maslarga);
+        
+        
+    }
+}

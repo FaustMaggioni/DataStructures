@@ -1,0 +1,45 @@
+run:
+BB: 
+ Raiz: 9 HI de 9-> 4 HI de 4-> 1 HI de 1->  No tiene
+ HD de 1->  No tiene
+ 
+ HD de 4-> 6 HI de 6->  No tiene
+ HD de 6->  No tiene
+ 
+ 
+ HD de 9-> 13 HI de 13-> 11 HI de 11-> 10 HI de 10->  No tiene
+ HD de 10->  No tiene
+ 
+ HD de 11->  No tiene
+ 
+ HD de 13-> 80 HI de 80->  No tiene
+ HD de 80-> 93 HI de 93->  No tiene
+ HD de 93->  No tiene
+ 
+ 
+ 
+ 
+Lista: [1,4,6,9,10,11,13,80,93]
+X: false
+Minimo (1): 1
+Maximo (93): 93
+Rango: [9,10,11,13,80]
+BB sin 13: 
+ Raiz: 9 HI de 9-> 4 HI de 4-> 1 HI de 1->  No tiene
+ HD de 1->  No tiene
+ 
+ HD de 4-> 6 HI de 6->  No tiene
+ HD de 6->  No tiene
+ 
+ 
+ HD de 9-> 11 HI de 11-> 10 HI de 10->  No tiene
+ HD de 10->  No tiene
+ 
+ HD de 11-> 80 HI de 80->  No tiene
+ HD de 80-> 93 HI de 93->  No tiene
+ HD de 93->  No tiene
+ 
+ 
+ 
+ 
+BUILD SUCCESSFUL (total time: 0 seconds)
